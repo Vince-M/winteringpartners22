@@ -1,0 +1,103 @@
+@use "../util" as *;
+
+.panels {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: rem(400);
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint-down(medium) {
+    flex-direction: column;
+  }
+
+  &__halfWidth {
+    margin-bottom: rem(20);
+    height: auto;
+
+    &--conf h2,
+    &--pharm h2,
+    &--conf h2,
+    &--pharm h2 a {
+      font-family: var(--font-display);
+      font-size: rem(48);
+      letter-spacing: rem(2);
+      color: var(--white);
+      text-shadow: rem(3) rem(3) rem(5) var(--black);
+    }
+
+    &--conf,
+    &--pharm {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background-position: center top;
+      width: 50%;
+      height: rem(400);
+
+      @include breakpoint-down(medium) {
+        width: 100%;
+      }
+    }
+
+    &--conf {
+      background-image: url("../img/panels_conference_1300x400-min.jpg");
+    }
+
+    &--pharm {
+      background-image: url("../img/panels_pharmacy_1300x400-min.jpg");
+
+      @include breakpoint-down(medium) {
+        margin-top: rem(20);
+      }
+    }
+  }
+
+  &__fullWidth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/panels_tradeshow_1920x400-min.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    height: rem(400);
+
+    &--trade h2 {
+      font-family: var(--font-display);
+      font-size: rem(48);
+      letter-spacing: rem(2);
+      color: var(--white);
+      text-shadow: rem(3) rem(3) rem(5) var(--black);
+    }
+  }
+
+  &__fullBanner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--nwcLightBlue);
+    width: cover;
+    margin-bottom: rem(20);
+
+    h3 {
+      font-family: var(--font-display);
+      font-size: rem(23);
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 0;
+      padding: rem(20) 0;
+      text-align: center;
+    }
+  }
+}
+
+.wpgCaps {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: rem(1);
+}

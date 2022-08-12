@@ -1,0 +1,13 @@
+@use "../util" as *;
+
+.pharmacyDays {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: rem(40);
+
+  @include breakpoint-down(small) {
+    flex-direction: column;
+    line-height: rem(48);
+  }
+}

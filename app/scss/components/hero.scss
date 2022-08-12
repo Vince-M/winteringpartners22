@@ -1,0 +1,25 @@
+@use "../util" as *;
+
+.hero {
+  &__index {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    // left: 50%;
+    // transform: translateX(-50%);
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    margin-bottom: rem(20);
+
+    @include breakpoint-down(medium) {
+      transition: all 350ms ease-in-out;
+    }
+
+    &--headline {
+    }
+  }
+}

@@ -1,0 +1,148 @@
+@use "../util" as *;
+
+.pages {
+  &__heading {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: rem(48);
+    color: var(--nwcGreen);
+  }
+
+  &__subhead {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: rem(40);
+    color: var(--nwcGreen);
+    margin-top: rem(40);
+    margin-bottom: 0;
+  }
+}
+
+.content {
+  &__logo {
+    margin-bottom: rem(60);
+
+    @include breakpoint-down(small) {
+      margin-bottom: rem(40);
+    }
+
+    &--victoriaInn {
+      @include breakpoint-down(small) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &--half-width {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: rem(10);
+      // width: 100%;
+      margin-bottom: rem(10);
+
+      img {
+        width: 50%;
+
+        @include breakpoint-down(small) {
+          flex-direction: column;
+          width: 100%;
+        }
+      }
+
+      @include breakpoint-down(small) {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+
+    &--full-width {
+      margin-top: rem(10);
+      margin-bottom: rem(40);
+    }
+  }
+}
+
+.victoriaInfo {
+  &__columns {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+    gap: rem(20);
+    margin-top: rem(40);
+    margin-bottom: rem(60);
+    padding-bottom: rem(20);
+    border-bottom: rem(1) solid var(--nwcGreen);
+
+    &--column {
+      width: 50%;
+      padding-left: rem(40);
+
+      @include breakpoint-down(small) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__head {
+    font-size: rem(20);
+    color: var(--nwcGreen);
+  }
+}
+
+.victoriaInn {
+  font-family: var(--font-display);
+  font-size: rem(26);
+  font-weight: 500;
+
+  a {
+    color: var(--nwcGreen);
+
+    &:hover {
+      border-bottom: rem(2) solid var(--nwcGreen);
+      cursor: pointer;
+    }
+  }
+}
+
+.hours {
+  padding-left: rem(10);
+  color: var(--grey);
+  &__head {
+    font-weight: 700;
+    color: var(--nwcGreen);
+    margin-top: 0;
+  }
+
+  &__daily {
+    font-weight: 700;
+    color: var(--grey);
+  }
+}
+
+.menus li {
+  list-style: none;
+  margin-bottom: rem(10);
+}
+
+.victoriaMenu a {
+  color: var(--grey);
+  border-bottom: rem(1) solid var(--grey);
+
+  &:hover {
+    border-bottom: none;
+  }
+}
+
+// .menu a:hover {
+//   border-bottom: none;
+// }
