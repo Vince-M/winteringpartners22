@@ -26,7 +26,7 @@
     <title>NWC 2022 Wintering Partners Conference</title>
 
     <!-- import scripts and styles -->
-    <link rel="stylesheet" href="dist/style.css" />
+    <!-- <link rel="stylesheet" href="dist/style.css" /> -->
     <script defer src="dist/script.js"></script>
 
     <?php wp_head(); ?>
@@ -171,4 +171,4 @@
     </header>
     <!-- ============================================== -->
 
-    <main>
+  
