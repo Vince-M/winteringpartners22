@@ -184,6 +184,10 @@
   }
 }
 
+.admin-bar .header {
+  margin-top: rem(30);
+}
+
 .head {
   @include breakpoint-down(medium) {
     display: flex;

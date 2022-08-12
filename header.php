@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
 
     <meta
       property="og:title"
@@ -16,14 +17,14 @@
     <link rel="icon" type="image/x-icon" href="favicon.png" />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=League+Spartan:wght@300;400;700&display=swap"
       rel="stylesheet"
-    />
+    /> -->
 
-    <title>NWC 2022 Wintering Partners Conference</title>
+    <!-- <title>NWC 2022 Wintering Partners Conference</title> -->
 
     <!-- import scripts and styles -->
     <!-- <link rel="stylesheet" href="dist/style.css" /> -->
@@ -32,7 +33,7 @@
     <?php wp_head(); ?>
 
   </head>
-  <body>
+  <body <?php body_class(); ?>>
     <!-- HEADER
     =================================================== -->
     <header class="header">
@@ -42,10 +43,10 @@
         <nav class="nav">
           <!-- <div class="head"> -->
           <div class="header__logo">
-            <a href="index.html">
+            <a href="<?php echo site_url(); ?>">
               <img
-                src="img/winterPartnersGathering_175x85.svg"
-                alt="WPG_logo"
+                src="<?php echo get_theme_file_uri(); ?>/img/winterPartnersGathering_175x85.svg" width="175px" height="85px"
+                alt="NWC Wintering Partners Gathering 2022"
               />
             </a>
           </div>
