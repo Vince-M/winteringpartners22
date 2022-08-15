@@ -28,7 +28,7 @@
 
     <!-- import scripts and styles -->
     <!-- <link rel="stylesheet" href="dist/style.css" /> -->
-    <script defer src="dist/script.js"></script>
+    <!-- <script defer src="dist/script.js"></script> -->
 
     <?php wp_head(); ?>
 
@@ -43,7 +43,7 @@
         <nav class="nav">
           <!-- <div class="head"> -->
           <div class="header__logo">
-            <a href="<?php echo site_url(); ?>">
+            <a href="<?php echo esc_url(site_url() ); ?>">
               <img
                 src="<?php echo get_theme_file_uri(); ?>/img/winterPartnersGathering_175x85.svg" width="175px" height="85px"
                 alt="NWC Wintering Partners Gathering 2022"

@@ -9,7 +9,7 @@
         <div
           class="hero__index"
           style="
-            background: url('img/hero_index_1920x1080_full-min.jpg') no-repeat;
+            background: url(<?php the_field( 'index_hero' ); ?>) no-repeat;
             background-position: top;
             background-size: cover;
           "
@@ -20,18 +20,18 @@
       <!-- PANELS
     =================================================== -->
       <section class="panels panels__halfWidth">
-        <div class="panels__halfWidth--conf">
+        <div class="panels__halfWidth--conf" style="background: url(<?php the_field( 'conference_panel' ); ?> ) no-repeat; background-position: top center;">
           <a href="#">
             <h2>Conference</h2>
           </a>
         </div>
-        <div class="panels__halfWidth--bkgdImage panels__halfWidth--pharm">
+        <div class="panels__halfWidth--pharm" style="background: url(<?php the_field( 'pharmacy_panel' ); ?> ) no-repeat; background-position: top center;">
           <a href="#">
             <h2><a href="pharmacy-schedule.html">Pharmacy</a></h2>
           </a>
         </div>
       </section>
-      <section class="panels panels__fullWidth">
+      <section class="panels panels__fullWidth" style="background: url(<?php the_field( 'tradeshow_panel' ); ?> ) no-repeat; background-position: top center;">
         <div class="panels__fullWidth--trade panels_fullWidth--trade">
           <a href="#">
             <h2>TradeShow</h2>
@@ -40,11 +40,7 @@
       </section>
       <section>
         <div class="panels__fullBanner row">
-          <h3>
-            <span class="wpgCaps">Wintering Partners Gathering</span> / Winnipeg
-            2022 / <span class="wpgCaps">Taking Care of Business</span> -
-            Conference and Tradeshow
-          </h3>
+          <?php the_field( 'conference_banner' ); ?>
         </div>
       </section>
       <!-- ============================================== -->
