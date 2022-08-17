@@ -95,69 +95,18 @@
               <!-- search -->
             </div>
             <!-- header__media -->
-            <div class="header__menu">
-              <ul class="menu nav__list">
-                <li class="nav__item has-submenu">
-                  <a tabindex="0">Conference</a>
-                  <ul class="submenu">
-                    <li class="subitem"><a href="#">Schedule</a></li>
-                    <li class="subitem">
-                      <a href="victoria.html">Victoria Inn</a>
-                    </li>
-                    <li class="subitem">
-                      <a href="city.html">In the City</a>
-                    </li>
-                  </ul>
-                </li>
+            <div class="nav navbar header__menu" role="navigation">
 
-                <li class="nav__item has-submenu">
-                  <a tabindex="0">Tradeshow</a>
-                  <ul class="submenu">
-                    <li class="subitem">
-                      <a href="sponsors.html">Sponsors</a>
-                    </li>
-                    <li class="subitem">
-                      <a href="vendors.html">Vendors</a>
-                    </li>
-                    <li class="subitem">
-                      <a href="tradeshow.html">Tradeshow Rotations</a>
-                    </li>
-                  </ul>
-                </li>
+                <?php
+                  wp_nav_menu( array(
+                    'theme_location'  =>  'header-menu',
+                    'depth'           =>  3,
+                    'container'       =>  false,
+                     'menu_class'     =>  'menu nav__list'
+                  ))
+                  
+                ?>
 
-                <li class="nav__item has-submenu">
-                  <a tabindex="0">Feature Items</a>
-                  <ul class="submenu">
-                    <li class="subitem">
-                      <a href="#">Food</a>
-                    </li>
-                    <li class="subitem">
-                      <a href="#">General Merchandise</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="nav__item has-submenu">
-                  <a tabindex="0">Pharmacy</a>
-                  <ul class="submenu">
-                    <li class="subitem">
-                      <a href="pharmacy-schedule.html">Schedule</a>
-                    </li>
-                    <li class="subitem">
-                      <a href="victoria.html">Victoria Inn</a>
-                    </li>
-                    <li class="subitem"><a href="city.html">In the City</a></li>
-                  </ul>
-                </li>
-
-                <li class="nav__item">
-                  <a class="nav__link" href="awards.html">Store Awards</a>
-                </li>
-
-                <li class="nav__item">
-                  <a class="nav__link" href="contact.html">Contact</a>
-                </li>
-              </ul>
               <!-- nav__list mobile__fade -->
               <div class="btn btn__login nav__link">
                 <a class="btn btn__login nav__link" href="#">Log-In</a>

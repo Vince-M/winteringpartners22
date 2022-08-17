@@ -1,4 +1,4 @@
-console.log("Hello");
+console.log("Hello There!");
 console.log("hi");
 
 const btnHamburger = document.querySelector("#btnHamburger");

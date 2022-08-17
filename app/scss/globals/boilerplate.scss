@@ -90,3 +90,25 @@ body {
     font-weight: 700;
   }
 }
+
+#tsh_breadcrumbs .separator {
+  font-size: rem(20);
+  color: var(--nwcGreen);
+  font-weight: 500;
+}
+#tsh_breadcrumbs {
+  overflow: hidden;
+  text-align: left;
+  list-style: none;
+  margin: rem(11) 0;
+  padding: 0;
+}
+#tsh_breadcrumbs li {
+  font-family: var(--font-body);
+  font-size: rem(14);
+  color: var(--nwcLightGreen);
+  font-weight: 500;
+  margin-right: rem(14);
+  display: inline-block;
+  vertical-align: middle;
+}
