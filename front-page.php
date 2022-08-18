@@ -55,50 +55,53 @@
         <div class="sponsors__norWester container row">
 
           <div class="sponsors__norWester--logos">
-            <a href="https://cokecanada.com/" target="_blank"
-              ><?php 
+            <a href="https://cokecanada.com/" target="_blank">
+              <?php 
                 $image = get_field('sponsor_coca_cola_canada');
                 if( !empty( $image ) ): ?>
                     <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
-                <?php endif; ?></a>
+              <?php endif; ?>
+            </a>
           </div>
 
           <div class="sponsors__norWester--logos">
-            <a href="https://www.corporate.nestle.ca/en" target="_blank"
-              ><?php 
+            <a href="https://www.corporate.nestle.ca/en" target="_blank">
+              <?php 
                 $image = get_field('sponsor_nestle_canada');
                 if( !empty( $image ) ): ?>
                     <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
-                <?php endif; ?></a>
+              <?php endif; ?>
+            </a>
           </div>
 
           <div class="sponsors__norWester--logos">
-            <a href="https://www.pepsico.ca/" target="_blank"
-              ><?php 
+            <a href="https://www.pepsico.ca/" target="_blank">
+              <?php 
                 $image = get_field('sponsor_arctic_ice');
                 if( !empty( $image ) ): ?>
                     <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
-                <?php endif; ?>
+              <?php endif; ?>
             </a>
           </div>
+
           <div class="sponsors__norWester--logos">
-            <a href="https://hqfinefoods.com/" target="_blank"
-              ><img
-                src="img/sponsors/HQ-Fine-Foods_400x200.svg"
-                alt="HQ Fine Foods"
-                width="387"
-                height="auto"
-            /></a>
+            <a href="https://hqfinefoods.com/" target="_blank">
+              <?php 
+                $image = get_field('sponsor_hq');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+              <?php endif; ?>
+            </a>
           </div>
           
           <div class="sponsors__norWester--logos">
-            <a href="https://dufresne.ca/" target="_blank"
-              ><img
-                src="img/sponsors/dufresne_200x32.svg"
-                alt="Dufresne"
-                width="395"
-                height="auto"
-            /></a>
+            <a href="https://dufresne.ca/" target="_blank">
+              <?php 
+                $image = get_field('sponsor_hq');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+              <?php endif; ?>
+            </a>
           </div>
         </div>
 
@@ -108,45 +111,52 @@
 
         <div class="sponsors__furTrader container row">
           <div class="sponsors__furTrader--logos">
-            <a href="#"
-              ><img
-                src="img/sponsors/wonderbrands_399x65.svg"
-                alt="Wonderbrands logo"
-                width="390"
-            /></a>
+            <a href="#" target="_blank">
+              <?php 
+                $image = get_field('sponsor_wonderbrands');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+              <?php endif; ?>
+            </a>
+          </div>
+
+          <div class="sponsors__furTrader--logos">
+            <a href="https://www.mapleleaffoods.com/" target="_blank">
+              <?php 
+                $image = get_field('sponsors_maple_leaf');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+              <?php endif; ?>
+            </a>
+          </div>
+
+          <div class="sponsors__furTrader--logos">
+            <a href="https://www.olddutchfoods.ca/" target="_blank">
+              <?php 
+                $image = get_field('sponsor_old_dutch');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+              <?php endif; ?>
+            </a>
           </div>
           <div class="sponsors__furTrader--logos">
-            <a href="https://www.mapleleaffoods.com/" target="_blank"
-              ><img
-                src="img/sponsors/maple-leaf_184x200.svg"
-                alt="Maple Leaf foods logo"
-                width="300"
-            /></a>
+            <a href="https://pg.ca/en-ca/" target="_blank">
+              <?php 
+                $image = get_field('sponsor_pg');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+              <?php endif; ?>
+            </a>
           </div>
+
           <div class="sponsors__furTrader--logos">
-            <a href="https://www.olddutchfoods.ca/" target="_blank"
-              ><img
-                src="img/sponsors/oldDutch_300x223.svg"
-                alt="Old Dutch logo"
-                width="200"
-                height="auto"
-            /></a>
-          </div>
-          <div class="sponsors__furTrader--logos">
-            <a href="https://pg.ca/en-ca/" target="_blank"
-              ><img
-                src="img/sponsors/Proctor-Gamble_200x200.svg"
-                alt="P&G logo"
-                width="200"
-            /></a>
-          </div>
-          <div class="sponsors__furTrader--logos">
-            <a href="https://www.unilever.ca/" target="_blank"
-              ><img
-                src="img/sponsors/unilever_200x220.svg"
-                alt="Unilever logo"
-                width="200"
-            /></a>
+            <a href="https://www.unilever.ca/" target="_blank">
+              <?php 
+                $image = get_field('sponsor_unilever');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+              <?php endif; ?>
+            </a>
           </div>
         </div>
 
@@ -155,36 +165,43 @@
         </div>
         <div class="sponsors__mealSponsors container row">
           <div class="sponsors__mealSponsors--logos">
-            <a href="https://corpo.metro.ca/en/home.html" target="_blank"
-              ><img
-                src="img/sponsors/metro_397x88.svg"
-                alt="Metro Richelieu Inc."
-                width="397"
-            /></a>
+            <a href="https://corpo.metro.ca/en/home.html" target="_blank">
+              <?php 
+                $image = get_field('sponsor_metro');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+              <?php endif; ?>
+            </a>
           </div>
+
           <div class="sponsors__mealSponsors--logos">
-            <a href="https://www.sysco.ca/location/winnipeg/" target="_blank"
-              ><img
-                src="img/sponsors/Sysco_300x160.svg"
-                alt="Sysco Food Services of Winnipeg"
-                width="300"
-            /></a>
+            <a href="https://www.sysco.ca/location/winnipeg/" target="_blank">
+              <?php 
+                $image = get_field('sponsor_sysco');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+              <?php endif; ?>
+            </a>
           </div>
+
           <div class="sponsors__mealSponsors--logos">
-            <a href="http://parmalat.ca/" target="_blank"
-              ><img
-                src="img/sponsors/lactalis_399x135.svg"
-                alt="Lactalis Canada"
-                width="399"
-            /></a>
+            <a href="http://parmalat.ca/" target="_blank">
+              <?php 
+                $image = get_field('sponsor_lactalis');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+              <?php endif; ?>
+            </a>
           </div>
+
           <div class="sponsors__mealSponsors--logos">
-            <a href="https://wonderbrands.com/" target="_blank"
-              ><img
-                src="img/sponsors/wonderbrands_399x65.svg"
-                alt="Wonderbrands logo"
-                width="3900"
-            /></a>
+            <a href="https://wonderbrands.com/" target="_blank">
+              <?php 
+                $image = get_field('sponsor_wonderbrands');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+              <?php endif; ?>
+            </a>
           </div>
         </div>
       </section>
