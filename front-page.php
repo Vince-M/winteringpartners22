@@ -21,14 +21,14 @@
     =================================================== -->
       <section class="panels panels__halfWidth">
         <div class="panels__halfWidth--conf" style="background: url(<?php the_field( 'conference_panel' ); ?> ) no-repeat; background-position: top center;">
-          <a href="#">
-            <h2>Conference</h2>
-          </a>
+          
+            <h2><a href="<?php echo site_url( '/conference-schedule' ); ?>">Conference</a></h2>
+          
         </div>
         <div class="panels__halfWidth--pharm" style="background: url(<?php the_field( 'pharmacy_panel' ); ?> ) no-repeat; background-position: top center;">
-          <a href="#">
-            <h2><a href="pharmacy-schedule.html">Pharmacy</a></h2>
-          </a>
+          
+            <h2><a href="<?php echo site_url( '/pharmacy-schedule' ); ?>">Pharmacy</a></h2>
+          
         </div>
       </section>
       <section class="panels panels__fullWidth" style="background: url(<?php the_field( 'tradeshow_panel' ); ?> ) no-repeat; background-position: top center;">
@@ -53,32 +53,33 @@
           <h3>Nor'Westors</h3>
         </div>
         <div class="sponsors__norWester container row">
+
           <div class="sponsors__norWester--logos">
             <a href="https://cokecanada.com/" target="_blank"
-              ><img
-                src="img/sponsors/coca-cola_400x175-min.jpg"
-                alt="Coca Cola Canada Bottling Limited"
-                width="400"
-                height="auto"
-            /></a>
+              ><?php 
+                $image = get_field('sponsor_coca_cola_canada');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+                <?php endif; ?></a>
           </div>
+
           <div class="sponsors__norWester--logos">
             <a href="https://www.corporate.nestle.ca/en" target="_blank"
-              ><img
-                src="img/sponsors/nestle_395x306.svg"
-                alt="Nestle Canada"
-                width="395"
-                height="auto"
-            /></a>
+              ><?php 
+                $image = get_field('sponsor_nestle_canada');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+                <?php endif; ?></a>
           </div>
+
           <div class="sponsors__norWester--logos">
             <a href="https://www.pepsico.ca/" target="_blank"
-              ><img
-                src="img/sponsors/arctic-pepsi_400x175.svg"
-                alt="Arctic Ice, Pepsi Co. and Frito Lay"
-                width="400"
-                height="auto"
-            /></a>
+              ><?php 
+                $image = get_field('sponsor_arctic_ice');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
+                <?php endif; ?>
+            </a>
           </div>
           <div class="sponsors__norWester--logos">
             <a href="https://hqfinefoods.com/" target="_blank"
@@ -89,6 +90,7 @@
                 height="auto"
             /></a>
           </div>
+          
           <div class="sponsors__norWester--logos">
             <a href="https://dufresne.ca/" target="_blank"
               ><img
@@ -103,6 +105,7 @@
         <div class="sponsors__banner">
           <h3>The Fur Traders</h3>
         </div>
+
         <div class="sponsors__furTrader container row">
           <div class="sponsors__furTrader--logos">
             <a href="#"
