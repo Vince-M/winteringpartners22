@@ -75,6 +75,7 @@
 
       img.sponsor-logo {
         width: rem(250);
+        object-fit: contain;
 
         @include breakpoint-down(small) {
           width: 100%;

@@ -1,4 +1,4 @@
-console.log("Hello There!");
+console.log("Hello");
 console.log("hi");
 
 const btnHamburger = document.querySelector("#btnHamburger");
@@ -46,18 +46,18 @@ document.querySelector("#btnHamburger").addEventListener("click", function () {
 
 // Submenu
 function toggleItem() {
-  if (this.classList.contains("submenu-active")) {
-    this.classList.remove("submenu-active");
-  } else if (menu.querySelector(".submenu-active")) {
-    menu.querySelector(".submenu-active").classList.remove("submenu-active");
-    this.classList.add("submenu-active");
+  if (this.classList.contains("sub-menu-active")) {
+    this.classList.remove("sub-menu-active");
+  } else if (menu.querySelector(".sub-menu-active")) {
+    menu.querySelector(".sub-menu-active").classList.remove("sub-menu-active");
+    this.classList.add("sub-menu-active");
   } else {
-    this.classList.add("submenu-active");
+    this.classList.add("sub-menu-active");
   }
 }
 
 for (let nav__item of nav__items) {
-  if (nav__item.querySelector(".submenu")) {
+  if (nav__item.querySelector(".sub-menu")) {
     nav__item.addEventListener("click", toggleItem, false);
     nav__item.addEventListener("keypress", toggleItem, false);
   }
@@ -67,8 +67,8 @@ for (let nav__item of nav__items) {
 function closeSubmenu(e) {
   let isClickInside = menu.contains(e.target);
 
-  if (!isClickInside && menu.querySelector(".submenu-active")) {
-    menu.querySelector(".submenu-active").classList.remove("submenu-active");
+  if (!isClickInside && menu.querySelector(".sub-menu-active")) {
+    menu.querySelector(".submenu-active").classList.remove("sub-menu-active");
   }
 }
 

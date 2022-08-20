@@ -53,12 +53,11 @@
       </section>
       <!-- ============================================== -->
 
-
-
-      <!-- SPONSORS
+      <!-- SPONSORS SECTION
       =================================================== -->
-        <?php get_template_part( 'template-parts/sponsors' ); ?>
+      <?php get_template_part( 'template-parts/sponsors-page' ); ?>
       <!-- ============================================== -->
+
   </main>
 
    <?php get_footer(); ?>

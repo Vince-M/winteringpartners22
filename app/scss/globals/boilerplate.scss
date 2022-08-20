@@ -77,6 +77,9 @@ body {
 }
 
 .breadcrumbs {
+  font-family: var(--font-body);
+  font-size: rem(14);
+  margin-top: rem(16);
   margin-bottom: rem(40);
 }
 

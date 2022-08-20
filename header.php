@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
 
+    <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/favicon.ico">
+
     <meta
       property="og:title"
       content="Wintering Partners Gathering - winteringpartners.ca"
@@ -46,8 +48,7 @@
             <a href="<?php echo esc_url(site_url() ); ?>">
               <img
                 src="<?php echo get_theme_file_uri(); ?>/img/winterPartnersGathering_175x85.svg" width="175px" height="85px"
-                alt="NWC Wintering Partners Gathering 2022"
-              />
+                alt="NWC Wintering Partners Gathering 2022"/>
             </a>
           </div>
           <!-- header__logo -->
@@ -69,20 +70,16 @@
           <div class="header__nav hide-for-mobile">
             <div class="header__media">
               <div class="header__social">
-                <a href="#" target="_blank"
-                  ><img
-                    src="img/facebook.svg"
-                    width="25px"
-                    height="25px"
-                    alt="Facebook"
-                /></a>
-                <a href="#" target="_blank"
-                  ><img
-                    src="img/twitter.svg"
-                    width="25px"
-                    height="20px"
-                    alt="Twitter"
-                /></a>
+                <a href="#" target="_blank">
+                  <img
+                    src="<?php echo get_theme_file_uri(); ?>/img/facebook.svg" width="25px" height="25px"
+                    alt="Facebook"/>
+                </a>
+                <a href="#" target="_blank">
+                <img
+                    src="<?php echo get_theme_file_uri(); ?>/img/twitter.svg" width="25px" height="20px"
+                    alt="Facebook"/>
+                </a>
               </div>
               <!-- social -->
               <div class="header__search">
