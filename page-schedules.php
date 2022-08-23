@@ -1,3 +1,9 @@
+<?php
+/*
+  Template Name: Schedules Template
+  */
+?>
+
 <?php get_header(); ?>
 
   <main>
@@ -40,16 +46,22 @@
               }?>
           </div>
    
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+          <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
-            <?php the_content(); ?>
+          <?php the_content(); ?>
 
-            <?php endwhile; else: ?>
+          <?php endwhile; else: ?>
 
-            <?php _e( 'Sorry, no pages found' ); ?>
+          <?php _e( 'Sorry, no pages found' ); ?>
 
-            <?php endif; ?>
-        </div>
+          <?php endif; ?>
+
+          <div class="btn__center">
+            <a class="btn btn__back" href="<?php bloginfo( 'url' ); ?>/conference-schedule"
+              >Conference Schedules</a
+            >
+          </div>
+
       </section>
       <!-- ============================================== -->
 

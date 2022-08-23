@@ -5,10 +5,9 @@
         <div class="footer__nav">
           <div class="footer__logo">
             <a href="index.html">
-              <img
-                src="img/winterPartnersGathering_175x85.svg"
-                alt="WPG_logo"
-              />
+            <img
+                src="<?php echo get_theme_file_uri(); ?>/img/winterPartnersGathering_175x85.svg" width="175px" height="85px"
+                alt="NWC Wintering Partners Gathering 2022"/>
             </a>
           </div>
 
@@ -65,29 +64,20 @@
         <!-- footer__nav -->
         <div class="footer__media">
           <div class="footer__media--copy">
-            <p>&copy; 2022 The North West Company</p>
+            <p>&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></p>
           </div>
           <div class="footer__media--links">
-            <a href="#">FAQs</a>
-            <a href="#">Legal / Privacy</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Contact</a>
+            <a href="https://www.northwest.ca/legal-privacy" target="_blank">Legal / Privacy</a>
+            <a href="https://www.northwest.ca/terms-and-conditions" target="_blank">Terms & Conditions</a>
+            <a href="<?php echo esc_url(site_url( '/contact' ) ); ?>">Contact</a>
           </div>
           <div class="footer__media--social">
-            <a class="facebook" href="#"
-              ><img
-                src="img/facebook.svg"
-                width="25px"
-                height="25px"
-                alt="Facebook"
-            /></a>
-            <a class="twitter" href="#"
-              ><img
-                src="img/twitter.svg"
-                width="25px"
-                height="20px"
-                alt="Twitter"
-            /></a>
+            <a class="facebook" href="#" target="_blank">
+              <img
+                src="<?php echo get_theme_file_uri(); ?>/img/facebook.svg" width="25px" height="25px"
+                alt="Facebook"/>
+            </a>
+
           </div>
         </div>
       </div>

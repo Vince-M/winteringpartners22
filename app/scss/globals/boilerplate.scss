@@ -39,6 +39,15 @@ body {
   }
 }
 
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
 // SPACING
 .container {
   width: 80%;
@@ -76,6 +85,7 @@ body {
   padding: 0 rem(20);
 }
 
+// BREADCRUMBS
 .breadcrumbs {
   font-family: var(--font-body);
   font-size: rem(14);
@@ -114,4 +124,19 @@ body {
   margin-right: rem(14);
   display: inline-block;
   vertical-align: middle;
+}
+
+// SOCIAL MEDIA
+.facebook,
+.twitter {
+  &:hover {
+    opacity: 60%;
+    text-decoration: none;
+    transition: opacity 200ms ease-in-out;
+  }
+}
+
+// WOOCOMMERCE
+.content-area {
+  margin-top: rem(140);
 }

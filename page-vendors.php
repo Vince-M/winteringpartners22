@@ -39,16 +39,55 @@
                   bcn_display();
               }?>
           </div>
-   
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
-            <?php the_content(); ?>
+          <div class="container__vendors">
+            
 
-            <?php endwhile; else: ?>
+              <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 
-            <?php _e( 'Sorry, no pages found' ); ?>
+              <?php the_content(); ?>
 
-            <?php endif; ?>
+              <?php endwhile; else: ?>
+
+              <?php _e( 'Sorry, no pages found' ); ?>
+
+              <?php endif; ?>
+              <div class="vendors">
+              <div class="vendors__col">
+              <?php    
+                $conferenceVendors = new WP_Query ( array(       
+                  'post_type'       => 'vendors',
+                  'posts_per_page'  =>  -1,
+                  'paged'           =>  $paged,
+    
+                  
+                ));
+              ?>
+            
+
+            
+              <?php while ( $conferenceVendors->have_posts() ) : $conferenceVendors->the_post(); ?>
+
+              <!-- <div class="vendors__row"> -->
+              
+                  <div class="vendor vendor__food">
+                    <h4 class="vendor__name"><?php the_field( 'vendor_name' ); ?></h4>
+                    <p class="vendor__booth"><strong>Booth # </strong><?php the_field( 'vendor_booth_number' ); ?></p>
+                  </div> <!-- vendor vendor__food -->
+              
+              <!-- </div>  -->
+
+                <?php endwhile; ?>
+            </div> <!-- vendors__col -->
+
+            </div> <!-- vendors -->
+          </div> <!-- container__vendors -->
+
+          
+
+
+          </div> <!-- vendors -->
+        </div> <!-- container__vendors -->
         </div>
       </section>
       <!-- ============================================== -->

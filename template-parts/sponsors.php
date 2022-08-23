@@ -48,7 +48,7 @@
           <div class="sponsors__norWester--logos">
             <a href="https://dufresne.ca/" target="_blank">
               <?php 
-                $image = get_field('sponsor_hq');
+                $image = get_field('sponsor_dufresne');
                 if( !empty( $image ) ): ?>
                     <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image['title']); ?>" />
               <?php endif; ?>

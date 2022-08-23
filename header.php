@@ -70,16 +70,12 @@
           <div class="header__nav hide-for-mobile">
             <div class="header__media">
               <div class="header__social">
-                <a href="#" target="_blank">
+                <a class="facebook" href="#" target="_blank">
                   <img
                     src="<?php echo get_theme_file_uri(); ?>/img/facebook.svg" width="25px" height="25px"
                     alt="Facebook"/>
                 </a>
-                <a href="#" target="_blank">
-                <img
-                    src="<?php echo get_theme_file_uri(); ?>/img/twitter.svg" width="25px" height="20px"
-                    alt="Facebook"/>
-                </a>
+                
               </div>
               <!-- social -->
               <div class="header__search">

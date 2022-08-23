@@ -1,3 +1,9 @@
+<?php
+/*
+  Template Name: Sponsors Template
+  */
+?>
+
 <?php get_header(); ?>
 
   <main>
