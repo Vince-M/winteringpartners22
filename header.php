@@ -8,34 +8,12 @@
 
     <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/favicon.ico">
 
-    <meta
-      property="og:title"
-      content="Wintering Partners Gathering - winteringpartners.ca"
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://winteringpartners.ca" />
-    <meta property="og:image" content="" />
-
-    <link rel="icon" type="image/x-icon" href="favicon.png" />
-
-    <!-- Google Fonts -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=League+Spartan:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    /> -->
-
-    <!-- <title>NWC 2022 Wintering Partners Conference</title> -->
-
-    <!-- import scripts and styles -->
-    <!-- <link rel="stylesheet" href="dist/style.css" /> -->
-    <!-- <script defer src="dist/script.js"></script> -->
-
     <?php wp_head(); ?>
 
   </head>
   <body <?php body_class(); ?>>
+      <?php wp_body_open(); ?>
+
     <!-- HEADER
     =================================================== -->
     <header class="header">
@@ -45,10 +23,13 @@
         <nav class="nav">
           <!-- <div class="head"> -->
           <div class="header__logo">
-            <a href="<?php echo esc_url(site_url() ); ?>">
-              <img
-                src="<?php echo get_theme_file_uri(); ?>/img/winterPartnersGathering_175x85.svg" width="175px" height="85px"
-                alt="NWC Wintering Partners Gathering 2022"/>
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <?php if( has_custom_logo() ): ?>
+                    <?php the_custom_logo(); ?>
+                    <?php else: ?>
+                        <h3 class="site-title"><?php bloginfo( 'title' ); ?></h3>
+                        <span><?php bloginfo( 'description' ); ?></span>
+                <?php endif; ?>
             </a>
           </div>
           <!-- header__logo -->
@@ -113,5 +94,6 @@
       <!-- container header__section -->
     </header>
     <!-- ============================================== -->
+    
 
   

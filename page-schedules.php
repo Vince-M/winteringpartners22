@@ -52,12 +52,12 @@
 
           <?php endwhile; else: ?>
 
-          <?php _e( 'Sorry, no pages found' ); ?>
+          <p>Sorry, no pages found</p>
 
           <?php endif; ?>
 
           <div class="btn__center">
-            <a class="btn btn__back" href="<?php bloginfo( 'url' ); ?>/conference-schedule"
+            <a class="btn btn__back" href="<?php echo esc_url( home_url() ); ?>/conference-schedule"
               >Conference Schedules</a
             >
           </div>

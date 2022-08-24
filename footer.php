@@ -64,7 +64,7 @@
         <!-- footer__nav -->
         <div class="footer__media">
           <div class="footer__media--copy">
-            <p>&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></p>
+            <p><?php create_copyright(); ?></p>
           </div>
           <div class="footer__media--links">
             <a href="https://www.northwest.ca/legal-privacy" target="_blank">Legal / Privacy</a>

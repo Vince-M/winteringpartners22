@@ -46,7 +46,7 @@
 
             <?php endwhile; else: ?>
 
-            <?php _e( 'Sorry, no pages found' ); ?>
+            <p>Sorry, no pages found</p>
 
             <?php endif; ?>
         </div>
