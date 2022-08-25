@@ -5,7 +5,7 @@
 }
 
 table {
-  border: 1px solid #ccc;
+  border: rem(1) solid #ccc;
   border-collapse: collapse;
   margin: 0;
   padding: 0;
@@ -14,27 +14,30 @@ table {
 }
 
 table caption {
-  font-size: 1.5em;
-  margin: 0.5em 0 0.75em;
+  font-size: em(24);
+  margin: em(8) 0 0.75em;
   text-align: left;
   color: var(--nwcGreen);
 }
 
 table tr {
   background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  padding: 0.35em;
+  border: rem(1) solid #ddd;
+  padding: em(6);
 }
 
 table th,
 table td {
-  padding: 0.625em;
+  padding: em(14);
   text-align: center;
+  font-weight: 500;
+  font-family: var(--font-body);
+  font-size: rem(15);
 }
 
 table th {
   font-size: 0.85em;
-  letter-spacing: 0.1em;
+  letter-spacing: rem(1);
   text-transform: uppercase;
 }
 
@@ -44,30 +47,30 @@ table th {
   }
 
   table caption {
-    font-size: 1.3em;
+    font-size: em(20.8);
   }
 
   table thead {
     border: none;
     clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
+    height: rem(1);
+    margin: rem(-1);
     overflow: hidden;
     padding: 0;
     position: absolute;
-    width: 1px;
+    width: rem(1);
   }
 
   table tr {
-    border-bottom: 3px solid #ddd;
+    border-bottom: rem(3) solid #ddd;
     display: block;
-    margin-bottom: 0.625em;
+    margin-bottom: em(10);
   }
 
   table td {
-    border-bottom: 1px solid #ddd;
+    border-bottom: rem(1) solid #ddd;
     display: block;
-    font-size: 0.8em;
+    font-size: em(12.8);
     text-align: right;
   }
 
@@ -84,5 +87,11 @@ table th {
 
   table td:last-child {
     border-bottom: 0;
+  }
+}
+
+.row {
+  &__spacer {
+    background-color: var(--ncrGreen);
   }
 }
