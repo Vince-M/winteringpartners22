@@ -1,0 +1,34 @@
+@use "../util" as *;
+
+.onsale {
+  display: none;
+}
+
+// SINGLE PRODUCT PAGE
+.woocommerce div.product .product_title {
+  color: var(--nwcGreen);
+  font-size: rem(36);
+  font-family: var(--font-display);
+  font-weight: 300;
+  margin-top: 0;
+  font-family: var(--font-display);
+  line-height: 1.1;
+  margin-bottom: rem(20);
+}
+
+.woocommerce div.product {
+  position: relative;
+  margin-top: rem(60);
+  margin-bottom: rem(60);
+}
+
+.woocommerce-product-details__short-description p {
+  margin-top: rem(16);
+  margin-bottom: rem(20);
+}
+
+.woocommerce div.product form.cart .button {
+  vertical-align: middle;
+  float: left;
+  margin-left: rem(16);
+}

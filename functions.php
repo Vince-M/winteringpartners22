@@ -60,20 +60,9 @@ the_post_thumbnail( 'shop_single' );    // Shop single (600 x 600 hard cropped)
 
   add_post_type_support( 'page', 'excerpt' );
 }
-
 add_action( 'after_setup_theme', 'wpg_features', 0);
 
-add_action( 'woocommerce_before_main_content', 'wpg_open_content_container_row', 5 );
-function wpg_open_content_container_row() {
-  echo '<section class="main__content"> <div class="container container__content row">';
-}
-
-add_action( 'woocommerce_after_main_content', 'wpg_close_content_container_row', 5 );
-function wpg_close_content_container_row() {
-  echo '</div></div>';
-}
-
-remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar' );
+require get_template_directory() . '/inc/wc-modifications.php';
 
 function wpg_theme_menus() {
 
@@ -86,10 +75,14 @@ function wpg_theme_menus() {
 }
 add_action( 'init', 'wpg_theme_menus' );
 
+
+
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
    add_theme_support( 'woocommerce' );
 } 
+
+
 
 function create_copyright() {
   $all_posts = get_posts( 
