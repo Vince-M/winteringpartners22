@@ -100,9 +100,7 @@ function create_copyright() {
   _e( 'All rights reserved.' );
   }
 
-?>
 
-<?php
 
 function defer_parsing_of_js( $url ) {
   if ( is_user_logged_in() ) return $url; // don't break WP Admin
