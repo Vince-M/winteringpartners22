@@ -1,7 +1,12 @@
 <form class="search-form" method="get" action="<?php echo esc_url(site_url('/')); ?>">
-    <label class="headline headline--medium" for="s">Preform a New Search</label>
+  <label>
     <div class="search-form-row">
-      <input class="s" placeholder="What are you looking for?" id="s" type="search" name="s">
-      <input class="search-submit" type="submit" value="Search">
+      <span class="screen-reader-text"></span>
+        <input class="s search__input" placeholder="What are you searching for?" id="s" type="search" name="s">
+      </label>
+      <button type="submit" class="search-submit"><span class="screen-reader-text"><?php echo _x( 'Search', 'submit button' ); ?></span></button>
+
     </div>
 </form>
+
+

@@ -126,6 +126,56 @@ body {
   vertical-align: middle;
 }
 
+// SEARCH FORM
+.search {
+  &__content {
+    margin-top: rem(150);
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: rem(44);
+      font-weight: 300;
+      color: var(--nwcGreen);
+    }
+
+    li a {
+      font-family: var(--font-display);
+      font-size: rem(30);
+      font-weight: 500;
+      color: var(--nwcGreen);
+    }
+
+    @include breakpoint-down(small) {
+      margin-top: rem(175);
+    }
+  }
+
+  &__input {
+    margin-right: rem(10);
+
+    @include breakpoint-down(small) {
+      width: 100%;
+      line-height: rem(24);
+    }
+  }
+}
+
+.search-submit {
+  background-image: url("img/search.svg");
+  width: rem(24);
+  height: rem(24);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search-form-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 // SOCIAL MEDIA
 .facebook,
 .twitter {

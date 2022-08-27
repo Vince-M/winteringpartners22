@@ -62,7 +62,30 @@ the_post_thumbnail( 'shop_single' );    // Shop single (600 x 600 hard cropped)
 }
 add_action( 'after_setup_theme', 'wpg_features', 0);
 
-require get_template_directory() . '/inc/wc-modifications.php';
+
+
+if( class_exists( 'WooCommerce' ) ) {
+  require get_template_directory() . '/inc/wc-modifications.php';
+}
+
+/**
+ * Show cart contents / total Ajax
+ */
+add_filter( 'woocommerce_add_to_cart_fragments', 'wpg_woocommerce_header_add_to_cart_fragment' );
+
+function wpg_woocommerce_header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+
+	ob_start();
+
+	?>
+	<span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+	<?php
+	$fragments['span.items'] = ob_get_clean();
+	return $fragments;
+}
+
+
 
 function wpg_theme_menus() {
 
@@ -109,5 +132,8 @@ function defer_parsing_of_js( $url ) {
   return str_replace( ' src', ' defer src', $url );
 }
 add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
+
+
+
 
 ?>

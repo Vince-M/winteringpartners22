@@ -1,29 +1,48 @@
-<?php 
 
-get_header(); 
-pageBanner(array(
-  'title'  =>  'Search Results',
-  'subtitle'  =>  'You searched for &ldquo;' . esc_html(get_search_query(false)) . '&rdquo;'
-));
+<?php get_header( 'search' ); ?>
 
-?>
+  <main>
 
-  <div class="container container--narrow page-section">
-    <?php
-      if (have_posts()) {
-        while( have_posts() ) {
-          the_post();
-          get_template_part('template-parts/content', get_post_type());
-        }
-        echo paginate_links();
-      } else {
-        echo '<h2 class="headline headline--small-plus">No results match that search.</h2>';
-      }
+     
+            <!-- MAIN BODY
+      =================================================== -->
+      <section class="main__content search__content">
+        <div class="container container__content row">
+          <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+              <?php if(function_exists('bcn_display'))
+              {
+                  bcn_display();
+              }?>
+          </div>
+          <?php
+            $s=get_search_query();
+            $args = array(
+                            's' =>$s
+                        );
+                // The Query
+            $the_query = new WP_Query( $args );
+            if ( $the_query->have_posts() ) {
+                    _e("<h2 >Search Results for: ".get_query_var('s')."</h2>");
+                    while ( $the_query->have_posts() ) {
+                      $the_query->the_post();
+          ?>
+              <li>
+                  <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                  <p><?php the_excerpt(); ?></p>
+              </li>
+            <?php
+                      }
+              } else {
+            ?>
+              <h2 style='font-weight:bold;color:#000'>Nothing Found</h2>
+              <div class="alert alert-info">
+                <p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
+              </div>
+            <?php } ?>
+        </div>
+      </section>
+      <!-- ============================================== -->
 
-      get_search_form();
-      
-    ?>
+  </main>
 
-  </div>
-
-<?php get_footer(); ?>
+   <?php get_footer(); ?>

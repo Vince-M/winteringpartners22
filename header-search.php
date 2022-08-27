@@ -50,10 +50,6 @@
           <!-- header menu -->
           <div class="header__nav hide-for-mobile">
             <div class="header__media">
-              <div class="cart">
-                <a href="<?php echo wc_get_cart_url(); ?>"><span class="cart-icon"></span></a>
-                <span class="items"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
-              </div>
               <div class="header__social">
                 <a class="facebook" href="#" target="_blank">
                   <img
