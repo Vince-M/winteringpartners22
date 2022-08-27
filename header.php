@@ -85,11 +85,23 @@
                   ))
                   
                 ?>
-
               <!-- nav__list mobile__fade -->
-              <div class="btn btn__login nav__link">
-                <a class="btn btn__login nav__link" href="#">Log-In</a>
-              </div>
+
+              <?php if( class_exists( 'WooCommerce' ) ) : ?>
+                <div class="account">
+                  <?php if( is_user_logged_in() ) : ?>
+                    <a class="my_account" href="<?php echo esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ); ?>">My Account</a>
+                    <div class="btn btn__login nav__link">
+                      <a class="btn btn__login nav__link" href="<?php echo esc_url( wp_logout_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) ); ?>">Logout</a>
+                    </div> <!-- btn btn__login nav__link -->
+                  <?php else: ?>
+                    <div class="btn btn__login nav__link">
+                      <a class="my_account" href="<?php echo esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ); ?>">Login</a>
+                    </div> <!-- btn btn__login nav__link -->
+                  <?php endif; ?>
+                </div><!-- account -->
+              <?php endif; ?>
+             
             </div>
           </div>
           <!-- header__nav -->
